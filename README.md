@@ -1,43 +1,25 @@
 # Qiskit Quantum Learning ⚛️
 
-A structured, hands-on journey through quantum computing using **Qiskit** and **Qiskit Aer**.
+A structured, hands-on journey through quantum computing using **Qiskit 2.x** and **Qiskit Aer**.
 
-This repository contains quantum computing concepts, implementations, experiments, and projects designed to build a strong foundation from beginner-level quantum circuits to quantum algorithms and quantum machine learning.
+Each topic follows the workflow: **Understand → Implement → Experiment → Observe → Analyze**
 
-## 🎯 Goals
+Every module contains matching `.py` scripts and `.ipynb` notebooks — scripts for clean execution, notebooks for rich theory with LaTeX math and inline visualizations.
 
-* Understand the fundamentals of quantum computing
-* Learn quantum gates and quantum circuits
-* Explore quantum states, measurements, and probability
-* Understand multi-qubit systems and entanglement
-* Implement important quantum algorithms
-* Learn variational quantum algorithms
-* Explore quantum machine learning
-* Build practical quantum computing projects
+---
 
-## 🛠️ Technologies
+## 🛠️ Tech Stack
 
-* Python 3.11
-* Qiskit 2.x
-* Qiskit Aer
-* NumPy
-* Matplotlib
-* Jupyter Notebook
+| Tool | Version |
+|---|---|
+| Python | 3.11 |
+| Qiskit | 2.x |
+| Qiskit Aer | 0.17+ |
+| NumPy | 1.24+ |
+| Matplotlib | 3.7+ |
+| Jupyter Notebook | 7.0+ |
 
-## 📚 Learning Path
-
-```text
-01 → Quantum Fundamentals
-02 → Quantum Gates
-03 → Multi-Qubit Systems
-04 → Quantum Information
-05 → Quantum Algorithms
-06 → QFT & Shor's Algorithm
-07 → Variational Quantum Algorithms
-08 → Quantum Machine Learning
-09 → Quantum Optimization
-10 → Practical Projects
-```
+---
 
 ## 📁 Repository Structure
 
@@ -46,76 +28,66 @@ qiskit-quantum-learning/
 │
 ├── 01_fundamentals/
 │   ├── notebooks/
+│   │   ├── 01_first_quantum_circuit.ipynb
+│   │   ├── 02_qubit_and_quantum_states.ipynb
+│   │   └── 03_bloch_sphere.ipynb
 │   └── scripts/
+│       ├── 01_first_quantum_circuit.py
+│       ├── 02_qubit_and_quantum_states.py
+│       └── 03_bloch_sphere.py
 │
 ├── 02_quantum_gates/
 │   ├── notebooks/
+│   │   └── 01_quantum_gates.ipynb
 │   └── scripts/
+│       └── 01_quantum_gates.py
 │
 ├── 03_multi_qubit/
 │   ├── notebooks/
+│   │   └── 01_multi_qubit_systems.ipynb
 │   └── scripts/
-│
-├── 04_quantum_information/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 05_quantum_algorithms/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 06_qft_and_shor/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 07_variational_algorithms/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 08_quantum_machine_learning/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 09_quantum_optimization/
-│   ├── notebooks/
-│   └── scripts/
-│
-├── 10_projects/
+│       └── 01_multi_qubit_systems.py
 │
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-## 🚀 Current Progress
+---
 
-### 01 — Quantum Fundamentals
+## 📚 Learning Path & Progress
 
-* [x] First Quantum Circuit
-* [x] Hadamard Gate & Superposition
-* [x] Statevector Representation
-* [x] Measurement Probabilities
-* [x] Quantum Measurement Simulation
+### ✅ 01 — Quantum Fundamentals
 
-More topics will be added progressively.
+Core building blocks of quantum computation.
 
-## 🧠 Learning Philosophy
+| # | Topic | Script | Notebook |
+|---|---|---|---|
+| 01 | First Quantum Circuit — H gate, AerSimulator, measurement | `01_first_quantum_circuit.py` | `01_first_quantum_circuit.ipynb` |
+| 02 | Qubit & Quantum States — computational basis, superposition, statevectors | `02_qubit_and_quantum_states.py` | `02_qubit_and_quantum_states.ipynb` |
+| 03 | Bloch Sphere — geometric visualization of single-qubit states | `03_bloch_sphere.py` | `03_bloch_sphere.ipynb` |
 
-Each topic follows the workflow:
+---
 
-```text
-Understand
-    ↓
-Implement
-    ↓
-Experiment
-    ↓
-Observe
-    ↓
-Analyze
-```
+### ✅ 02 — Quantum Gates
 
-The goal is not only to write Qiskit code, but to understand what happens to the quantum state at each step.
+Single-qubit and two-qubit gate operations with matrix representations and Bloch sphere visualization.
+
+| # | Topic | Script | Notebook |
+|---|---|---|---|
+| 01 | Quantum Gates — Pauli X/Y/Z, H, S, T, Rotations RX/RY/RZ, CX, CZ, SWAP | `01_quantum_gates.py` | `01_quantum_gates.ipynb` |
+
+---
+
+### ✅ 03 — Multi-Qubit Systems
+
+Tensor products, entanglement, Bell states, and density matrices.
+
+| # | Topic | Script | Notebook |
+|---|---|---|---|
+| 01 | Multi-Qubit Systems — CNOT, Bell states, GHZ, entanglement, DensityMatrix, partial trace | `01_multi_qubit_systems.py` | `01_multi_qubit_systems.ipynb` |
+
+---
 
 ## ⚙️ Installation
 
@@ -132,7 +104,7 @@ Create a virtual environment:
 python -m venv .venv
 ```
 
-Activate it on Windows PowerShell:
+Activate on Windows PowerShell:
 
 ```powershell
 .venv\Scripts\Activate.ps1
@@ -144,44 +116,47 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-## ▶️ Running a Python Program
+---
 
-Example:
+## ▶️ Running Scripts
 
 ```powershell
 python 01_fundamentals/scripts/01_first_quantum_circuit.py
+python 03_multi_qubit/scripts/01_multi_qubit_systems.py
 ```
 
-## 📓 Running Jupyter Notebook
-
-Start Jupyter:
+## 📓 Running Notebooks
 
 ```powershell
 jupyter notebook
 ```
 
-Then open the required notebook from the corresponding `notebooks` directory.
+Then open any `.ipynb` from the corresponding `notebooks/` directory.
 
-## 📊 Simulators
+---
 
-The repository primarily uses **Qiskit Aer** for local quantum circuit simulation.
+## 🧠 What Makes This Different
 
-No IBM Quantum account is required for the basic learning programs.
+- **Modular & reusable code**: Each algorithm is broken into clean, documented Python functions — not a single monolithic script.
+- **Step-by-step statevector analysis**: Each algorithm tracks the quantum state evolution at every stage (before oracle, after diffuser, after QFT), not just the final histogram.
+- **Qiskit 2.x idioms**: Uses modern `QFTGate`, `qc.if_test()` dynamic feed-forward, `Statevector`, and `plot_distribution` APIs throughout.
+- **Deep theory in notebooks**: Notebooks include LaTeX math derivations, truth tables, quantum resource exchange comparisons, and interference proofs — not just code.
+- **Verified outputs**: All notebooks are pre-executed via `nbconvert` so circuit diagrams, histograms, and plots are visible without re-running.
+
+---
 
 ## 👨‍💻 Author
 
 **Dipesh Arjun Shinde**
-
 Integrated Computer Science & Engineering
 Dr. Babasaheb Ambedkar Technological University, Lonere
 
-Interested in:
-
-* Quantum Computing
-* Quantum Machine Learning
-* Quantum Algorithms
-* Quantum Optimization
-* Artificial Intelligence
+Interests:
+- Quantum Computing
+- Quantum Machine Learning
+- Quantum Algorithms
+- Quantum Optimization
+- Artificial Intelligence
 
 ---
 
