@@ -138,10 +138,9 @@ Then open any `.ipynb` from the corresponding `notebooks/` directory.
 ## 🧠 What Makes This Different
 
 - **Modular & reusable code**: Each algorithm is broken into clean, documented Python functions — not a single monolithic script.
-- **Step-by-step statevector analysis**: Each algorithm tracks the quantum state evolution at every stage (before oracle, after diffuser, after QFT), not just the final histogram.
+- **Step-by-step statevector analysis**: Each algorithm tracks the quantum state evolution at every stage not just the final histogram.
 - **Qiskit 2.x idioms**: Uses modern `QFTGate`, `qc.if_test()` dynamic feed-forward, `Statevector`, and `plot_distribution` APIs throughout.
 - **Deep theory in notebooks**: Notebooks include LaTeX math derivations, truth tables, quantum resource exchange comparisons, and interference proofs — not just code.
-- **Verified outputs**: All notebooks are pre-executed via `nbconvert` so circuit diagrams, histograms, and plots are visible without re-running.
 
 ---
 
